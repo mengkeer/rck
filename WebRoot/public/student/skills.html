@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHU人才库</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/jquery-2.1.4.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="../img/wakatime-120.png">
+                <span>东华人才库</span>
+            </a>
+        </div>
+
+
+        <div id="navbar-content" class="collapse navbar-collapse navbar-right">
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">人才库</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">程序设计类</a></li>
+                        <li><a href="#">ACM类</a></li>
+                        <li><a href="#">多媒体类</a></li>
+                        <li><a href="#">移动开发类</a></li>
+                        <li><a href="#">网站设计类</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目活动</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articlelist.html">文章资源</a></li>
+                        <li><a href="projectlist.html">项目申请</a></li>
+                        <li><a href="#">我参与的项目</a></li>
+                        <li><a href="post.html">发布请求</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">已发送的消息</a></li>
+                        <li><a href="#">已接受的消息</a></li>
+                        <li><a href="#">发消息</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">mengkeer</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../student/info.html">基本信息</a></li>
+                        <li><a href="skills.html">专业技能</a></li>
+                        <li><a href="modpwd.html">密码修改</a></li>
+                    </ul>
+                </li>
+                <li><a href="/#" class="navbar-link">注销</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    &nbsp;勾选你掌握的专业技能并保存.<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这样老师有项目的时候就能<span style="font-weight: bold">根据标签找到会相关技能的同学，</span>直接找掌握这些技能的同学沟通~<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这里没有你的擅长的技能吗？发邮件给科创中心，我们会及时增加新的标签~
+</div>
+
+<div class="content">
+    <div class="info-left">
+        <div class="sty-head">
+            <div class="head-set">
+                <img width="66" height="66" src="../img/chen.jpg">
+            </div>
+            <span class="sty-name">mengkeer</span>
+        </div>
+        <ul class="info-list">
+            <li>
+                <a href="../student/info.html">
+                    <i class="al-1"></i>
+                    <span>我的信息</span>
+                </a>
+            </li>
+            <li>
+                <a href="head.html">
+                    <i class="al-2"></i>
+                    <span>我的头像</span>
+                </a>
+            </li>
+            <li>
+                <a href="modpwd.html">
+                    <i class="al-3"></i>
+                    <span>密码修改</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html"  class="bg-blue">
+                    <i class="al-4"></i>
+                    <span>我的技能</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-right">
+        <div class="sr-t">
+            <span class="tit-b"></span>
+            <span class="acc-sec">技能状态</span>
+        </div>
+        <div class="sr-b">
+
+
+            <ul id="myTabs" class="pager" role="tablist">
+                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">已有拥有的技能</a></li>
+                <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">希望获得的技能</a></li>
+
+            </ul>
+            <div id="myTabContent" class="tab-content">
+
+                <div role="tabpanel" class="tab-pane fade active in" id="home" aria-labelledby="home-tab">
+                    <h4 style="text-align: center">我拥有的专业技能</h4>
+                    <table class="table table-hover table-striped">
+                        <tbody>
+                        <tr>
+                            <td>C/C++基本开发</td>
+                            <td>类Unix系统开发</td>
+                            <td>网络编程</td>
+                        </tr>
+                        <tr>
+                            <td>企业级(含Web)开发:.NET</td>
+                            <td>ARM(或其他平台)汇编</td>
+                            <td>基本开发:JavaEE</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="divider"></div>
+                    <h4 style="text-align: center">可选的专业技能</h4>
+                    <form action="">
+                        <table class="table table-hover table-striped">
+                            <tbody>
+                            <tr>
+                                <td><input type="checkbox" name="owner">C/C++基本开发</td>
+                                <td><input type="checkbox" name="owner">C/C++:算法深入</td>
+                                <td><input type="checkbox" name="owner">C++:STL/Boost库</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">C++:MFC/COM/ATL</td>
+                                <td><input type="checkbox" name="owner">C++:Qt框架</td>
+                                <td><input type="checkbox" name="owner">Windows系统开发</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">类Unix系统开发</td>
+                                <td><input type="checkbox" name="owner">网络编程</td>
+                                <td><input type="checkbox" name="owner">多核/多线程开发</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">x86/x64汇编</td>
+                                <td><input type="checkbox" name="owner">ARM(或其他平台)汇编</td>
+                                <td><input type="checkbox" name="owner">单片机/嵌入式开发</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">数据库设计与开发</td>
+                                <td><input type="checkbox" name="owner">基本开发:JavaEE</td>
+                                <td><input type="checkbox" name="owner">企业级(含Web)开发:JavaEE</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">基本开发:.NET</td>
+                                <td><input type="checkbox" name="owner">企业级(含Web)开发:.NET</td>
+                                <td><input type="checkbox" name="owner">Web开发:PHP</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">Web前台技术:HTML/Javascript</td>
+                                <td><input type="checkbox" name="owner">Web前台技术:CSS/UI美工</td>
+                                <td><input type="checkbox" name="owner">开发语言:Python/Perl</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">开发语言:其他</td>
+                                <td><input type="checkbox" name="owner">版本控制(SVN/Git等)</td>
+                                <td><input type="checkbox" name="owner">移动平台开发:Android</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">移动平台开发:WindowsPhone</td>
+                                <td><input type="checkbox" name="owner">移动平台开发:iOS</td>
+                                <td><input type="checkbox" name="owner">移动平台开发:JavaME及其他</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">计算机图形/游戏开发</td>
+                                <td><input type="checkbox" name="owner">数字图像处理技术</td>
+                                <td><input type="checkbox" name="owner">服务器管理:WinServer</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">服务器管理:Linux</td>
+                                <td><input type="checkbox" name="owner">服务器管理:其他系统</td>
+                                <td><input type="checkbox" name="owner">数据库运维:Oracle</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">数据库运维:MySQL</td>
+                                <td><input type="checkbox" name="owner">数据库运维:SQLServer</td>
+                                <td><input type="checkbox" name="owner">数据库运维:其他</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">网络管理</td>
+                                <td><input type="checkbox" name="owner">安全技术</td>
+                                <td><input type="checkbox" name="owner">其他:精通Word/Excel/PPT</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="owner">其他:精通PS/AI等平面艺术设计</td>
+                                <td><input type="checkbox" name="owner">其他:精通Flash/AE等动画艺术设计</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center">
+                            <button type="submit"  class="btn btn-success">确认修改</button>
+                        </div>
+                    </form>
+
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                    <h4 style="text-align: center">我希望获得的专业技能</h4>
+                    <table class="table table-hover table-striped">
+                        <tbody></tbody>
+                    </table>
+                    <div class="divider"></div>
+                    <h4 style="text-align: center">可选的专业技能</h4>
+                    <form>
+                        <table class="table table-hover table-striped">
+                            <tbody>
+                            <tr>
+                                <td><input type="checkbox" id="1">C/C++基本开发</td>
+                                <td><input type="checkbox" id="2">C/C++:算法深入</td>
+                                <td><input type="checkbox" id="3">C++:STL/Boost库</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="4">C++:MFC/COM/ATL</td>
+                                <td><input type="checkbox" id="5">C++:Qt框架</td>
+                                <td><input type="checkbox" id="6">Windows系统开发</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="7">类Unix系统开发</td>
+                                <td><input type="checkbox" id="8">网络编程</td>
+                                <td><input type="checkbox" id="9">多核/多线程开发</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="10">x86/x64汇编</td>
+                                <td><input type="checkbox" id="11">ARM(或其他平台)汇编</td>
+                                <td><input type="checkbox" id="12">单片机/嵌入式开发</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="13">数据库设计与开发</td>
+                                <td><input type="checkbox" id="14">基本开发:JavaEE</td>
+                                <td><input type="checkbox" id="15">企业级(含Web)开发:JavaEE</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="16">基本开发:.NET</td>
+                                <td><input type="checkbox" id="17">企业级(含Web)开发:.NET</td>
+                                <td><input type="checkbox" id="18">Web开发:PHP</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="19">Web前台技术:HTML/Javascript</td>
+                                <td><input type="checkbox" id="20">Web前台技术:CSS/UI美工</td>
+                                <td><input type="checkbox" id="21">开发语言:Python/Perl</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="22">开发语言:其他</td>
+                                <td><input type="checkbox" id="23">版本控制(SVN/Git等)</td>
+                                <td><input type="checkbox" id="24">移动平台开发:Android</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="25">移动平台开发:WindowsPhone</td>
+                                <td><input type="checkbox" id="26">移动平台开发:iOS</td>
+                                <td><input type="checkbox" id="27">移动平台开发:JavaME及其他</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="28">计算机图形/游戏开发</td>
+                                <td><input type="checkbox" id="29">数字图像处理技术</td>
+                                <td><input type="checkbox" id="30">服务器管理:WinServer</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="31">服务器管理:Linux</td>
+                                <td><input type="checkbox" id="32">服务器管理:其他系统</td>
+                                <td><input type="checkbox" id="33">数据库运维:Oracle</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="34">数据库运维:MySQL</td>
+                                <td><input type="checkbox" id="35">数据库运维:SQLServer</td>
+                                <td><input type="checkbox" id="36">数据库运维:其他</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="37">网络管理</td>
+                                <td><input type="checkbox" id="38">安全技术</td>
+                                <td><input type="checkbox" id="39">其他:精通Word/Excel/PPT</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" id="40">其他:精通PS/AI等平面艺术设计</td>
+                                <td><input type="checkbox" id="41">其他:精通Flash/AE等动画艺术设计</td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div style="text-align: center">
+                            <button type="submit" class="btn btn-success">确认修改</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="../css/info.css">
+
+<div class="container">
+    <p class="copyright">Copyright ©2015-2017 slotus. All Rights Reserved 鄂ICP备15010044号-1 沪公网安备 31011702000056号</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+body{
+    background-color: #FFF!important;
+}
+.page-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    height: 100%;
+}
+
+.page-left{
+    float: left;
+    padding: 0;
+    width: 265px;
+    min-height: 630px;
+    font-size: 13px;
+    height: auto;
+}
+
+.page-right{
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 705px;
+    min-height: 500px;
+    height: auto;
+    overflow: hidden;
+    background-color: rgb(248, 250, 254);
+}
+
+.page-left h4 {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 265px;
+    height: 40px;
+    background: url(../img/col_nav.png) no-repeat left;
+}
+
+.page-left h4 span {
+    float: left;
+    margin: 10px 0 0 10px;
+    padding: 0;
+    color: white;
+}
+
+.page-left ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 264px;
+    height: 630px;
+    background: rgb(248, 250, 254);
+    border: 2px solid #DC2D2B;
+    border-top: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.page-left li {
+    margin: 15px 0 0 10px;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 700;
+    background: url(../img/icon1.gif) no-repeat left;
+}
+
+.page-left li a {
+    margin: 0 0 0 15px;
+    text-decoration: none;
+    color: #666;
+    border-bottom: 1px dotted #bbb;
+    padding: 0 0 1px 0;
+    font-size: 12px;
+}
+
+
+.page-right h4 {
+    margin: 0;
+    padding: 0;
+    width: 705px;
+    height: 40px;
+    font-weight: 400;
+    text-align: left;
+    background-color:  #8bc427;
+    opacity: 0.8;
+    /*background: url(../img/col_title.png) no-repeat left;*/
+}
+
+.page-right .page-right-nav {
+    float: left;
+    margin: 12px 0 0 10px;
+    font-size: 14px;
+}
+
+.page-right h4 a {
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px dotted #bbb;
+}
+
+.page-right ul {
+    margin: 10px 0;
+    width: 705px;
+    height: auto;
+    padding-left: 0px;
+}
+
+.page-right ul li {
+    margin: 0;
+    padding: 0 0 0 5px;
+    width: 705px;
+    line-height: 200%;
+
+}
+
+.page-right ul li .wj-title {
+    text-align: left;
+}
+
+.page-right ul li .wj-date {
+    text-align: right;
+    margin-right: 10px;
+    float: right;
+    color: #666;
+}
+
+.page-right ul li a {
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    text-decoration: none;
+    color: #666;
+    border-bottom: 1px dotted #bbb;
+}
+
+.pagesize,.pageNum{
+    height: 21px;
+    width: 24px;
+}

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHU人才库</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/jquery-2.1.4.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="../img/wakatime-120.png">
+                <span>东华人才库</span>
+            </a>
+        </div>
+
+
+        <div id="navbar-content" class="collapse navbar-collapse navbar-right">
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">人才库</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">程序设计类</a></li>
+                        <li><a href="#">ACM类</a></li>
+                        <li><a href="#">多媒体类</a></li>
+                        <li><a href="#">移动开发类</a></li>
+                        <li><a href="#">网站设计类</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目活动</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articlelist.html">文章资源</a></li>
+                        <li><a href="projectlist.html">项目申请</a></li>
+                        <li><a href="#">我参与的项目</a></li>
+                        <li><a href="post.html">发布请求</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">已发送的消息</a></li>
+                        <li><a href="#">已接受的消息</a></li>
+                        <li><a href="#">发消息</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">mengkeer</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="info.html">基本信息</a></li>
+                        <li><a href="skills.html">专业技能</a></li>
+                        <li><a href="modpwd.html">密码修改</a></li>
+                    </ul>
+                </li>
+                <li><a href="/logout" class="navbar-link">注销</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="main-wraper">
+    <div class="ibx-crumbs">
+        <span class="ibx-crumbs-title">消息中心</span>
+        <a class="send-btn" data-toggle="modal" data-target="#editModal"><span class="glyphicon glyphicon-send"></span><span class="send-text">发送消息</span></a>
+    </div>
+    <div class="news-list-nav">
+        <div class="news-list-nav-item news-list-nav-op-btn list-del-btn" style="display: block;">
+            <span class="news-list-nav-btn-icon news-list-nav-del-btn-icon"></span>清空所有消息
+        </div>
+        <div class="news-list-nav-item news-list-nav-op-btn list-set-read-btn" style="display: block;">
+            <span class="news-list-nav-btn-icon"></span> 全部置为已读
+        </div>
+        <div class="bs-example bs-example-tabs" data-example-id="togglable-tabs">
+            <ul id="myTabs" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">全部消息</a></li>
+                <li role="presentation" class=""><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile" aria-expanded="false">未读消息<span class="message-num">(3)</span></a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div id="myTabContent" class="tab-content">
+        <div role="tabpanel"   class="tab-pane fade active in clearfix" id="home" aria-labelledby="home-tab">
+            <div class="news-box">
+                <div class="news-box-list clearfix">
+                    <ul class="news-list-wrap">
+                        <li class="news-list-item clearfix isread-item ">
+                            <div class="news-list-item-wrap">
+                                <p class="small news-item-title">发送者:<span class="news-item-sender">mengkeer</span>&nbsp;&nbsp;&nbsp;&nbsp;接受者:<span class="news-item-receiver">131340226</span></p>
+                                <div class="news-item-content">
+                                    <a class="news-link">
+                                        注意：这是发送的信息这是发送的信息这是发送的信息
+                                        这是发送的信息这是发送的信息这是发送的信息这是发
+                                    </a>
+
+                                </div>
+                                <div class="news-item-right">
+                                    <span class="news-list-time">2015-10-12 20:20:20</span>
+                                    <div class="news-list-item-right-op">
+                                        <span class="news-list-item-right-read news-list-item-right-btn"></span>
+                                        <span class="news-list-item-right-del news-list-item-right-btn"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="news-list-item clearfix isread-item ">
+                            <div class="news-list-item-wrap">
+                                <p class="small news-item-title">发送者:<span class="news-item-sender">mengkeer</span>&nbsp;&nbsp;&nbsp;&nbsp;接受者:<span class="news-item-receiver">131340226</span></p>
+                                <div class="news-item-content">
+                                    <a class="news-link">
+                                        注意：这是发送的信息这是发送的信息这是发送的信息
+                                        这是发送的信息这是发送的信息这是发送的信息这是发
+                                    </a>
+                                </div>
+                                <div class="news-item-right">
+                                    <span class="news-list-time">2015-10-12 20:20:20</span>
+                                    <div class="news-list-item-right-op">
+                                        <span class="news-list-item-right-read news-list-item-right-btn"></span>
+                                        <span class="news-list-item-right-del news-list-item-right-btn"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="news-list-item clearfix isread-item ">
+                        <div class="news-list-item-wrap">
+                            <p class="small news-item-title">发送者:<span class="news-item-sender">mengkeer</span>&nbsp;&nbsp;&nbsp;&nbsp;接受者:<span class="news-item-receiver">131340226</span></p>
+                            <div class="news-item-content">
+                                <a class="news-link">
+                                    注意：这是发送的信息这是发送的信息这是发送的信息
+                                    这是发送的信息这是发送的信息这是发送的信息这是发
+                                </a>
+                            </div>
+                            <div class="news-item-right">
+                                <span class="news-list-time">2015-10-12 20:20:20</span>
+                                <div class="news-list-item-right-op">
+                                    <span class="news-list-item-right-read news-list-item-right-btn"></span>
+                                    <span class="news-list-item-right-del news-list-item-right-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                        <li class="news-list-item clearfix isread-item ">
+                        <div class="news-list-item-wrap">
+                            <p class="small news-item-title">发送者:<span class="news-item-sender">mengkeer</span>&nbsp;&nbsp;&nbsp;&nbsp;接受者:<span class="news-item-receiver">131340226</span></p>
+                            <div class="news-item-content">
+                                <a class="news-link">
+                                    注意：这是发送的信息这是发送的信息这是发送的信息
+                                    这是发送的信息这是发送的信息这是发送的信息这是发
+                                </a>
+                            </div>
+                            <div class="news-item-right">
+                                <span class="news-list-time">2015-10-12 20:20:20</span>
+                                <div class="news-list-item-right-op">
+                                    <span class="news-list-item-right-read news-list-item-right-btn"></span>
+                                    <span class="news-list-item-right-del news-list-item-right-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                        <li class="news-list-item clearfix isread-item ">
+                            <div class="news-list-item-wrap">
+                                <p class="small news-item-title">发送者:<span class="news-item-sender">mengkeer</span>&nbsp;&nbsp;&nbsp;&nbsp;接受者:<span class="news-item-receiver">131340226</span></p>
+                                <div class="news-item-content">
+                                    <a class="news-link">
+                                        注意：这是发送的信息这是发送的信息这是发送的信息
+                                        这是发送的信息这是发送的信息这是发送的信息这是发
+                                    </a>
+
+                                </div>
+                                <div class="news-item-right">
+                                    <span class="news-list-time">2015-10-12 20:20:20</span>
+                                    <div class="news-list-item-right-op">
+                                        <span class="news-list-item-right-read news-list-item-right-btn"></span>
+                                        <span class="news-list-item-right-del news-list-item-right-btn"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="common-pager-wrap clearfix">
+                <label>页数:</label>	<span>1/1</span>
+                <ul class="common-pager-group">
+                    <li class="common-pager-item common-pager-disabled" data-type="first">首页</li>
+                    <li class="common-pager-item common-pager-disabled" data-type="previous">上一页</li>
+                    <li class="common-pager-item common-pager-disabled" data-type="next">下一页</li>
+                    <li class="common-pager-item common-pager-disabled" data-type="last">末页</li>
+                </ul>
+            </div>
+        </div>
+        <div role="tabpanel"  class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+            <div class="news-box">
+                <div class="news-box-empty">
+                    <p>没有新消息</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title">发送消息</h4>
+            </div>
+            <div class="modal-body">
+                <form id="myform" class="form-horizontal">
+                    <div class="form-group">
+
+                        <label for="receiver" class="send-label col-sm-12 control-label">receiver</label>
+                        <br />
+                        <br />
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" name="receiver" id="receiver" placeholder="学号">
+                        </div>
+                        <div class="alert alert-warning alert-dismissible col-sm-6" role="alert">
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <strong>Warning!</strong>发送失败发送失败
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sendText"  class="send-label col-sm-5 control-label">发送的消息</label>
+                        <br />
+                        <br />
+                        <div class="col-sm-12">
+                            <textarea  class="form-control" rows="5" name="sendText" id="sendText" placeholder="text"></textarea>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" id="startSend" class="btn btn-success">发送信息</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="showModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title">显示信息</h4>
+            </div>
+            <div class="modal-body">
+                <form  class="form-horizontal">
+                    <div class="form-group">
+                        <label for="show-sender" class="send-label col-sm-2 control-label">sender:</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static" id="show-sender"></p>
+                        </div>
+                        <label for="show-receiver" class="send-label col-sm-2 control-label">receiver:</label>
+                        <div class="col-sm-4">
+                            <p class="form-control-static" id="show-receiver"></p>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="sendText"  class="send-label col-sm-5 control-label">发送的消息</label>
+                        <br />
+                        <br />
+                        <div class="col-sm-12">
+                            <p class="form-control-static" id="show-sendText"></p>
+                        </div>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" disabled class="btn btn-success">发送信息</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<link type="text/css" rel="stylesheet" href="../css/messages.css">
+<script src="../js/tab.js"></script>
+<script src="../js/messages.js"></script>
+
+<div class="container">
+    <p class="copyright">Copyright ©2015-2017 slotus.  All Rights Reserved    鄂ICP备15010044号-1  沪公网安备 31011702000056号</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=WebRoot/public/js/register.js,WebRoot/public/js/jquery-2.1.4.min.js,WebRoot/public/lib/kindeditor/plugins/code/prettify.js
+validator.Unchecked=

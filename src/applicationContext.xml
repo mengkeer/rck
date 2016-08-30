@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd" xmlns:tx="http://www.springframework.org/schema/tx">
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:hibernate.cfg.xml">
+		</property>
+	</bean>
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<bean id ="Article" class="cc.rck.model.Article"></bean>
+	<bean id ="ArticleDao" class="cc.rck.DAO.basic.ArticleDAO"></bean>
+	<bean id ="Message" class="cc.rck.model.Message"></bean>
+	<bean id ="MessageDao" class="cc.rck.DAO.basic.MessageDAO"></bean>
+	<bean id ="Projects" class="cc.rck.model.Projects"></bean>
+	<bean id ="ProjectsDao" class="cc.rck.DAO.basic.ProjectsDAO"></bean>
+	<bean id ="Replies" class="cc.rck.model.Replies"></bean>
+	<bean id ="RepliesDao" class="cc.rck.DAO.basic.RepliesDAO"></bean>
+	<bean id ="RepliesId" class="cc.rck.model.RepliesId"></bean>
+	<bean id ="Skills" class="cc.rck.model.Skills"></bean>
+	<bean id ="SkillsDao" class="cc.rck.DAO.basic.SkillsDAO"></bean>
+	<bean id ="Teams" class="cc.rck.model.Teams"></bean>
+	<bean id ="TeamsDao" class="cc.rck.DAO.basic.TeamsDAO"></bean>
+	<bean id ="User" class="cc.rck.model.User"></bean>
+	<bean id ="UserDao" class="cc.rck.DAO.basic.UserDAO"></bean>
+	<bean id ="Userskill" class="cc.rck.model.Userskill"></bean>
+	<bean id ="UserskillDao" class="cc.rck.DAO.basic.UserskillDAO"></bean>
+	
+	<bean id="userLogic" class="cc.rck.service.UserLogic">
+		<property name="sdao" ref="UserskillDao"></property>
+		<property name="dao" ref="MessageDao"></property>
+	</bean>
+	<bean id="loginService" class="cc.rck.service.loginService">
+		<property name="userDao" ref="UserDao"></property>
+		<property name="user" ref="User"></property>
+	</bean>	
+	<bean id="messageService" class="cc.rck.service.messageService">
+		<property name="udao" ref="UserDao"></property>
+		<property name="mdao" ref="MessageDao"></property>
+	</bean>
+	<bean id ="projectService" class="cc.rck.service.projectService">
+		<property name="pdao" ref="ProjectsDao"></property>
+	</bean>
+	<bean id ="teamService" class="cc.rck.service.teamService">
+		<property name="tdao" ref="TeamsDao"></property>
+	</bean>
+	
+</beans>

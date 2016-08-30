@@ -1,0 +1,62 @@
+.panel-heading{
+    background-color:rgb(248, 250, 254)!important;;
+}
+.panel-title a{
+    font-weight:bold;
+}
+.panel-title a:hover,.panel-title a:focus{
+    text-decoration: none;
+}
+tr>td:first-child{
+     width: 65%;
+     color: #57a000;
+ }
+tr>td:first-child>a{
+    width: 60%;
+    color: #57a000;
+}
+tr>td:nth-child(2){
+    width: 20%;
+}
+tr>td:nth-child(3){
+    width: 20%;
+}
+a.list,.comment_right{
+    float: right;
+    color: #57a000;
+}
+
+a.list:hover,.a.list:focus{
+    text-decoration: none;
+    color: #d58512;
+}
+
+.divider{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.share{
+    border-top: 1px dashed #ddd;
+    border-color: gray;
+}
+
+.bdsharebuttonbox{
+    float: right;
+}
+
+.comment_text{
+    float: none;
+}
+.comment>div{
+    border-top: 1px dashed #ddd;
+    border-color: gray;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.comment_date{
+    float: none;
+    margin-top: 5px;
+}

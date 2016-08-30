@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../js/html5shiv.js"></script>
+    <script src="../../../js/respond.min.js"></script>
+    <![endif]-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/moment-with-locales.js"></script>
+
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+
+
+
+
+
+              <div style="width:200px;margin:auto;padding-top:50px;">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+             <div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                    dayViewHeaderFormat:'YYYY年 MMMM',
+                    defaultDate: "2016/01/10",
+                            locale: 'zh_CN',
+                            format: 'YYYY/MM/DD hh:mm',
+                            inline: false,
+                            sideBySide: false,
+                    showTodayButton:true,
+                    showClose:false,
+                            disabledDates: [
+                                moment("2016/01/11"),
+                                new Date(2016, 0, 12),
+                                "2016/01/13 00:00"
+                            ]
+                }
+
+                );
+            });
+        </script>
+    </div>
+</div>
+
+</body>
+</html>

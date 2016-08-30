@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHU人才库</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/jquery-2.1.4.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="../img/wakatime-120.png">
+                <span>东华人才库</span>
+            </a>
+        </div>
+
+
+        <div id="navbar-content" class="collapse navbar-collapse navbar-right">
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">人才库</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">程序设计类</a></li>
+                        <li><a href="#">ACM类</a></li>
+                        <li><a href="#">多媒体类</a></li>
+                        <li><a href="#">移动开发类</a></li>
+                        <li><a href="#">网站设计类</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目活动</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articlelist.html">文章资源</a></li>
+                        <li><a href="projectlist.html">项目申请</a></li>
+                        <li><a href="#">我参与的项目</a></li>
+                        <li><a href="post.html">发布请求</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">已发送的消息</a></li>
+                        <li><a href="#">已接受的消息</a></li>
+                        <li><a href="#">发消息</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">mengkeer</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../student/info.html">基本信息</a></li>
+                        <li><a href="skills.html">专业技能</a></li>
+                        <li><a href="modpwd.html">密码修改</a></li>
+                    </ul>
+                </li>
+                <li><a href="/#" class="navbar-link">注销</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    &nbsp;在这里可以编辑您的头像，支持实时预览裁剪与上传，支持JPG、PNG等格式，图片需小于2M。
+</div>
+
+<div class="content">
+    <div class="info-left">
+        <div class="sty-head">
+            <div class="head-set">
+                <img width="66" height="66" src="../img/chen.jpg">
+            </div>
+            <span class="sty-name">mengkeer</span>
+        </div>
+        <ul class="info-list">
+            <li>
+                <a href="../student/info.html">
+                    <i class="al-1"></i>
+                    <span>我的信息</span>
+                </a>
+            </li>
+            <li>
+                <a href="head.html" class="bg-blue">
+                    <i class="al-2"></i>
+                    <span>我的头像</span>
+                </a>
+            </li>
+            <li>
+                <a href="modpwd.html">
+                    <i class="al-3"></i>
+                    <span>密码修改</span>
+                </a>
+            </li>
+            <li>
+                <a href="skills.html">
+                    <i class="al-4"></i>
+                    <span>我的技能</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-right">
+        <div class="sr-t">
+            <span class="tit-b"></span>
+            <span class="acc-sec">头像设置</span>
+        </div>
+        <div class="sr-b">
+            <div class="head_post"  >
+                <div class="head-perview clearfix">
+                    <div class="perview-large">
+                        <p style="font-size: 18px;text-align: center">原始图片</p>
+                        <div id="baseview_box">
+                            <img id="srcImg" src="../img/chen.jpg" />
+                        </div>
+                    </div>
+                    <div class="preview-right">
+                        <p style="font-size: 18px">头像预览</p>
+                        <div class="preview-middle">
+                            <div id="preview_box">
+                                <img id="previewImg" src="../img/chen.jpg"/>
+                            </div>
+                        </div>
+                        <p style="font-size: 12px;color: #666;margin-top: 10px"><span>大头像100*100</span></p>
+                        <div class="preview-small">
+                            <div id="preview_box_small">
+                                <img id="previewImg_small" src="../img/chen.jpg"/>
+                            </div>
+                        </div>
+                        <p style="font-size: 12px;color: #666;margin-top: 10px"><span>小头像55*55</span></p>
+                    </div>
+                </div>
+                <div id="DemoBox" style="display: none">
+                    <label for="dx">
+                        X1
+                    </label>
+                    <input type="text" id="dx" size="5"/>
+                    <label for="dy">
+                        Y1
+                    </label>
+                    <input type="text" id="dy" size="5"/>
+                    <label for="dx2">
+                        X2
+                    </label>
+                    <input type="text" id="dx2" size="5"/>
+                    <label for="dy2">
+                        Y2
+                    </label>
+                    <input type="text" id="dy2" size="5" />
+                    <label for="dw">
+                        W
+                    </label>
+                    <input type="text" id="dw" size="5" />
+                    <label for="dh">
+                        H
+                    </label>
+                    <input type="text" id="dh" size="5"/>
+                    <label for="drx">
+                        rx
+                    </label>
+                    <input type="text" id="drx" size="5"/>
+                    <label for="dry">
+                        ry
+                    </label>
+                    <input type="text" id="dry" size="5"/>
+                </div>
+                <button id="ImgPostBtn" class="btn btn-success">保存头像</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+<link rel="stylesheet" type="text/css" href="../css/info.css">
+<link rel="stylesheet" type="text/css" href="../css/jquery.Jcrop.css">
+<script src="../js/jquery.color.js"></script>
+<script src="../js/jquery.Jcrop.js"></script>
+<script src="../js/info.js"></script>
+
+<script type="text/javascript">
+    //简单的事件处理程序，响应自onChange,onSelect事件，按照上面的Jcrop调用
+    function showCoords(obj) {
+        $('#dx').val(obj.x);
+        $('#dy').val(obj.y);
+        $('#dx2').val(obj.x2);
+        $('#dy2').val(obj.y2);
+        $('#dw').val(obj.w);
+        $('#dh').val(obj.h);
+        $('#drx').val($("#previewImg").width() /obj.w);
+        $('#dry').val($("#previewImg").height() /obj.h);
+
+        ///////////////////////////////////////////////
+        $("#x").val(obj.x);
+        $("#y").val(obj.y);
+        $("#w").val(obj.w);
+        $("#h").val(obj.h);
+        if (parseInt(obj.w) > 0 && parseInt(obj.h) > 0) {
+            //计算预览区域图片缩放的比例，通过计算显示区域的宽度(与高度)与剪裁的宽度(与高度)之比得到
+            var rx = $("#preview_box").width() / obj.w;
+            var ry = $("#preview_box").height() / obj.h;
+
+            var rx2 = $("#preview_box_small").width() / obj.w;
+            var ry2 = $("#preview_box_small").height() / obj.h;
+            //通过比例值控制图片的样式与显示
+            $("#previewImg").css( {
+                width : Math.round(rx * $("#srcImg").width()) + "px", //预览图片宽度为计算比例值与原图片宽度的乘积
+                height : Math.round(rx * $("#srcImg").height()) + "px", //预览图片高度为计算比例值与原图片高度的乘积
+                marginLeft : "-" + Math.round(rx * obj.x) + "px",
+                marginTop : "-" + Math.round(ry * obj.y) + "px"
+            });
+            $("#previewImg_small").css( {
+                width : Math.round(rx2 * $("#srcImg").width()) + "px", //预览图片宽度为计算比例值与原图片宽度的乘积
+                height : Math.round(rx2 * $("#srcImg").height()) + "px", //预览图片高度为计算比例值与原图片高度的乘积
+                marginLeft : "-" + Math.round(rx2 * obj.x) + "px",
+                marginTop : "-" + Math.round(ry2 * obj.y) + "px"
+            });
+        }
+    }
+    $("#srcImg").Jcrop( {
+        aspectRatio : 1,
+        onChange : showCoords,
+        onSelect : showCoords,
+        minSize : [ 50, 50 ],
+    });
+
+    function submitImageCut()
+    {
+        if (parseInt($("#w").val()) > 0 && parseInt($("#h").val()) > 0) {
+            var submitForm=$("#crop_form");
+            $("#bw").val(parseInt($("#srcImg").width()));
+            $("#bh").val(parseInt($("#srcImg").height()));
+            $("#bigImage").val($("#srcImg").attr("src"));
+            submitForm.attr("action","cutTest/cut.cgi");
+            submitForm.submit();
+        }
+    }
+
+</script>
+
+
+
+<div class="container">
+    <p class="copyright">Copyright ©2015-2017 slotus. All Rights Reserved 鄂ICP备15010044号-1 沪公网安备 31011702000056号</p>
+</div>
+</body>
+</html>

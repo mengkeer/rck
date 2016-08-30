@@ -1,0 +1,160 @@
+body{
+    background: url('../img/bg.jpg');
+    background-size: 100%;
+}
+
+.left{
+    float: left;
+    margin-left: 100px;
+    margin-top: 340px;
+}
+
+.right{
+    float: right;
+    width: 420px;
+    height: 332px;
+    /*background-color: #3c763d;*/
+    margin-right: 150px;
+    margin-top: 200px;
+    box-shadow: 2px 2px 30px 2px #000;
+    position: relative;
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    opacity: 0.4;
+    filter: alpha(opacity:40);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.area{
+    width: 396px;
+    /* height: 294px; */
+    background: #EEE;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: rgb(238, 238, 238);
+}
+
+.header{
+    width: auto;
+    display: block;
+    line-height: 22px;
+    padding: 14px 30px;
+    /*margin-bottom: 17px;*/
+    font-size: 22px;
+    margin-top: 0px;
+    color: rgb(102, 102, 102);;
+    font-family: Tahoma, 'Microsoft Yahei', Simsun;
+}
+.register{
+    float: right;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.loginArea{
+    color: rgb(102, 102, 102);
+    display: block;
+    font-family: Tahoma, 'Microsoft Yahei', Simsun;
+    line-height: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 396px;
+    margin-right: 0px;
+    height: auto;
+}
+
+.loginInputArea ,.passwordArea,.codeTextArea{
+    line-height: normal;
+    border-radius: 2px;
+    overflow: hidden;
+    border: 1px solid rgb(204,204,204);
+}
+
+.codeArea{
+    /*height: auto!important;*/
+}
+
+.codeTextArea{
+    width: 50%;
+    float: left;
+}
+.codeImgArea{
+    float: right;
+    margin-left: 30px;
+    width: 40%;
+}
+.codeImgArea img{
+    width: 100%;
+    height: 34px;
+}
+
+.loginInput ,.passwordInput,.codeTextInput{
+    width: 100%;
+    /*height: 100%;*/
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    box-shadow: none!important;
+    /*inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)*/
+}
+
+.loginInputArea span,.passwordArea span,.codeTextArea span
+{
+    color: rgb(204,204,204);
+    background-color: #fff;
+    border: none;
+    border-radius: 0px;
+    border-color: transparent;
+    top: 0px;
+}
+
+.info{
+    margin-bottom: 0px;
+    height: 21px;
+    float: none;
+}
+.info p{
+    margin-bottom: 0px;
+    line-height: 21px;
+    color: #fb2e55;
+}
+
+form button{
+    width: 100%;
+    margin-bottom: 14px!important;
+    line-height: 30px;
+    background-color: #fb2e55!important;
+}
+form button:focus{
+   outline: none!important;
+}
+form button span{
+    font-weight: bold;
+    color: #FFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+.other{
+    width: 100%;
+    vertical-align: middle;
+    height: 24px;
+    padding-bottom: 3px;
+}
+.other a{
+    float: right;
+    display: block;
+    height: 21px;
+    line-height: 21px;
+}
+
+form{
+    margin-bottom: 0px;
+}

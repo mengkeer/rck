@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="messageResource"></constant>
+	<constant name="strust.i18n.encoding" value="UTF-8"></constant>
+	
+	<package name="rck" extends="struts-default" namespace="/" >
+		<action name="doLogin" class="cc.rck.servlet.LoginAction" method="doLogin"></action>
+		<action name="doRegister" class="cc.rck.servlet.LoginAction" method="doRegister">
+		</action>
+		<action name="getImageCode" class="cc.rck.servlet.LoginAction" method="getImageCode">
+		</action>
+		<action name="logout" class="cc.rck.servlet.LoginAction" method="doLogout">
+			<result>/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="jump" extends="struts-default" namespace="/">
+			<action name="infoJump" class = "cc.rck.servlet.JumpAciton" method ="infoJump">
+				<result name="success_s">/WEB-INF/student/info.jsp</result>
+				<result name="success_t">/WEB-INF/teacher/info.jsp</result>
+				<result name="error">/login.jsp</result>
+			</action>
+			<action name="detailjump" class = "cc.rck.servlet.JumpAciton" method ="detailJump">
+			 	<result name="success_s">/WEB-INF/student/articledetail.jsp</result>
+				<result name="success_t">/WEB-INF/teacher/articledetail.jsp</result>
+				<result name="error">/login.jsp</result>
+			</action>
+			<action name="*Jump" class = "cc.rck.servlet.JumpAciton" method ="Jump">
+				<result name="success_s">/WEB-INF/student/{1}.jsp</result>
+				<result name="success_t">/WEB-INF/teacher/{1}.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+	</package>
+	
+	<package name="update" extends="struts-default" namespace="/">
+		<action name="doModPwd" class="cc.rck.servlet.UpdateInfAction" method="doModPwd">
+		</action>
+		<action name="updateMge" class="cc.rck.servlet.UpdateInfAction" method="updateMge">
+		</action>
+		<action name="updateSkill" class="cc.rck.servlet.UpdateInfAction" method="updateSkill">
+			<result name="success">/WEB-INF/student/skills.jsp</result>
+		</action>
+	</package>
+	
+	<package name="message" extends="struts-default" namespace="/">
+		<action name="sendMessage" class="cc.rck.servlet.MessageAction" method="sendMessage">
+			<result name="success">/WEB-INF/student/message.jsp</result>
+		</action>
+		<action name="deleteOne" class="cc.rck.servlet.MessageAction" method="deleteOne">
+		</action>
+		<action name="deleteAll" class="cc.rck.servlet.MessageAction" method="deleteAll">
+		</action>
+		<action name="readAll" class="cc.rck.servlet.MessageAction" method="readAll">
+		</action>
+		<action name="readOne" class="cc.rck.servlet.MessageAction" method="readOne">
+		</action>
+	</package>
+	
+	<package name="reply" extends="struts-default" namespace="/">
+		<action name="addReply" class="cc.rck.servlet.ReplyAction" method="addReply">
+<!-- 		<result name="success_s" type="redirect">/WEB-INF/student/articledetail.jsp?article=${value}</result>
+		<result name="success_t">/WEB-INF/teacher/articledetail.jsp?article=${value}</result> -->
+		</action>
+		<action name="deleteReply" class="cc.rck.servlet.ReplyAction" method="deleteReply">
+		</action>
+		<action name="addArticle" class="cc.rck.servlet.ReplyAction" method="addArticle">
+		</action>
+	</package>
+	<package name="project" extends="struts-default" namespace="/">
+		<action name="addProject" class="cc.rck.servlet.ProjectAction" method="addProject">
+		</action>
+		<action name="applyProject" class="cc.rck.servlet.ProjectAction" method="applyProject">
+		</action>
+	</package>
+	
+	<package name="upload" extends="struts-default" namespace="/">
+		<action name="uploadBigImage" class="cc.rck.servlet.UploadAction" method="uploadBigImage">
+			 <!-- 配置fileUpload拦截器 -->  
+	            <interceptor-ref name="fileUpload">  
+	                <!-- 配置允许上传的文件类型-->  
+	                <param name="allowedTypes">image/jpeg,image/png,image/x-png</param>   
+	                <!-- 配置允许上传的文件大小 -->  
+	                <param name="maximumSize">2048000</param>  
+	            </interceptor-ref>  
+            <interceptor-ref name="defaultStack"></interceptor-ref>  
+				<result name="success_s">/WEB-INF/student/cutImage.jsp</result>
+				<result name="success_t">/WEB-INF/teacher/cutImage.jsp</result>
+				<result name="error">/login.jsp</result>
+		</action>
+		<action name="cutBigImage" class="cc.rck.servlet.UploadAction" method="cutBigImage">
+			<result name="success_s">/WEB-INF/student/head.jsp</result>
+			<result name="success_t">/WEB-INF/teacher/head.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+	</package>
+	
+</struts>

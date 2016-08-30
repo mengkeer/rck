@@ -1,0 +1,72 @@
+<%@page import="cc.rck.model.Article"%>
+<%@page import="cc.rck.DAO.basic.ArticleDAO"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+ArticleDAO adao = new ArticleDAO();
+List<Article> articles = adao.findAll();
+if(articles==null){
+	articles = new ArrayList();
+}
+%>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<jsp:include page="header.jsp"></jsp:include>
+
+ <div class="container content">
+    <!-- Page Head -->
+    <h2 style="font-weight: bold">科创中心文章/资料列表</h2>
+    <br>
+
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        下面是科创中心发布的新闻、信息和资料下载的列表，供你参考。欢迎各位同学踊跃参加各类竞赛、科技创新项目。
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                   aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                    信息列表
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <div class="content-box-content">
+                    <table class="table table-hover table-striped">
+                        <thead>
+                            <tr>
+                                <th>标题</th>
+                                <th>作者</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <%
+                        	for(int i = articles.size()-1 ;i >=0;i--){
+                        	%><tr>
+                            <td>
+                                <a href="detailjump?article=<%=articles.get(i).getId() %>" title="title"><%= articles.get(i).getTitle() %></a>
+                            </td>
+                            <td><a href="infoJump?userid=<%=articles.get(i).getUser().getNumber() %>"><%=articles.get(i).getUser().getName() ==null||articles.get(i).getUser().getName().length()==0  ? articles.get(i).getUser().getNumber():articles.get(i).getUser().getName() %></a>
+                            </td>
+                            <td><%= articles.get(i).getPubtime() %></td>
+                        </tr>
+                        	<%}
+                         %>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<link rel="stylesheet" type="text/css" href="public/css/project.css">
+<jsp:include page="footer.jsp"></jsp:include>

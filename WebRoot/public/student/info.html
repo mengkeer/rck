@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DHU人才库</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/jquery-2.1.4.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="../img/wakatime-120.png">
+                <span>东华人才库</span>
+            </a>
+        </div>
+
+        <div id="navbar-content" class="collapse navbar-collapse navbar-right">
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="rckJump" class="dropdown-toggle" data-toggle="dropdown">人才库</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="rckJump?type=1">程序设计类</a></li>
+                        <li><a href="rckJump?type=2">ACM类</a></li>
+                        <li><a href="rckJump?type=3">多媒体类</a></li>
+                        <li><a href="rckJump?type=4">移动开发类</a></li>
+                        <li><a href="rckJump?type=5">网站设计类</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目活动</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articlelistJump">文章资源</a></li>
+                        <li><a href="articledetailJump">项目列表</a></li>
+                        <li><a href="#">我参与的项目</a></li>
+                        <li><a href="postJump">发布文章</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="messageJump" class="dropdown-toggle" data-toggle="dropdown">消息中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="messageJump">全部消息</a></li>
+                        <li><a href="messageJump">未读消息</a></li>
+                        <li><a href="messageJump">发送消息</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="infoJump" class="dropdown-toggle" data-toggle="dropdown"><span id="header_name">abc</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="infoJump">基本信息</a></li>
+                        <li><a href="skillsJump">专业技能</a></li>
+                        <li><a href="modpwdJump">密码修改</a></li>
+                    </ul>
+                </li>
+                <li><a href="logout" class="navbar-link">注销</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+            aria-hidden="true">&times;</span></button>
+    <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+    &nbsp;在这里查看和修改你的基本信息。填写更多的信息，可以方便老师对你有更多的了解~<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果学号、姓名、所在班级等基本信息有误，请联系科创中心管理人员进行修改。<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;请准确填写自己的Email，方便信息通知和老师联系你（填写不正确可能影响一些重要信息的传达）。<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人简介(纯文本方式)最多填写255个字符(多余部分自动截断)，可以填写自我介绍、联系方式等信息。<br>
+</div>
+
+<div class="content clearfix">
+    <div class="info-left">
+        <div class="sty-head">
+            <div class="head-set">
+                <img width="66" height="66" src="../img/chen.jpg">
+            </div>
+            <span class="sty-name">123456789</span>
+        </div>
+        <ul class="info-list">
+            <li>
+                <a href="infoJump" class="bg-blue">
+                    <i class="al-1" style="background-position:-71px -31px;"></i>
+                    <span>我的信息</span>
+                </a>
+            </li>
+            <li>
+                <a href="head.html">
+                    <i class="al-2"></i>
+                    <span>我的头像</span>
+                </a>
+            </li>
+            <li>
+                <a href="modpwdJump">
+                    <i class="al-3"></i>
+                    <span>密码修改</span>
+                </a>
+            </li>
+            <li>
+                <a href="skillsJump">
+                    <i class="al-4"></i>
+                    <span>我的技能</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="info-right">
+        <div class="sr-t">
+            <span class="tit-b"></span>
+            <span class="acc-sec">基本信息</span>
+            <a href="#" data-toggle="modal" data-target="#editModal" class="btn editBtn"><span
+                    class="glyphicon glyphicon-pencil" aria-hidden="true"></span>编辑</a>
+            </a>
+        </div>
+        <div class="sr-b">
+            <div class="alert alert-dismissible" style="display:none" id="info_div"  role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                <span id="info_text">修改成功</span>
+            </div>
+            <br />
+
+            <ul>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">账号：</p>
+                        <div class="sbi-m">
+                            <span>123456789</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">姓名：</p>
+                        <div class="sbi-m">
+                            <span id="p_name">abc</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">性别：</p>
+                        <div class="sbi-m">
+                            <span id="p_sex">男</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">班级信息：</p>
+                        <div class="sbi-m">
+                            <span id="p_class">信安1302</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">手机号：</p>
+                        <div class="sbi-m">
+                            <span id="p_phone"></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">邮箱：</p>
+                        <div class="sbi-m">
+                            <span id="p_email"></span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="sb-info">
+                        <p class="sbi-l">个人简介：</p>
+                        <div class="sbi-m">
+                            <span id="p_brief">12345</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">X</button>
+                <h4 class="modal-title">更改个人信息</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="myform" role="form">
+
+                    <div class="modal-left">
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <nobr>姓名</nobr>
+                            </label>
+
+                            <div class='col-sm-8'>
+                                <input type='text' id="name" name="name" class="form-control" value="abc" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <nobr>性别</nobr>
+                            </label>
+
+                            <div class='col-sm-8'>
+                                <!--<input type='text' id="sex" name="sex" class="form-control"/>-->
+                                <select id="sex" class="sex form-control">
+                                    <option value="男" selected>男</option>
+                                    <option value="女" >女</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <nobr>邮箱</nobr>
+                            </label>
+
+                            <div class='col-sm-8'>
+                                <input type='text' id="email" name="email" class="form-control" value="">
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="modal-right">
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <nobr>班级信息</nobr>
+                            </label>
+
+                            <div class='col-sm-8'>
+                                <input type='text' id="class" name="class" class="form-control" value="信安1302">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <nobr>手机号</nobr>
+                            </label>
+
+                            <div class='col-sm-8'>
+                                <input type='text' id="phone" name="phone" class="form-control" value="">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">
+                                <nobr>简介</nobr>
+                            </label>
+
+                            <div class='col-sm-8'>
+                                <textarea id="brief" name="brief" class="form-control" >12345</textarea>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="clearfix"></div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" onclick="update();" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="submit" class="btn btn-success" onclick="updatemge();" form="myform">确认修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="../css/info.css">
+<script type="text/javascript" src="../js/info.js"></script>
+
+
+
+<div class="container">
+    <p class="copyright">Copyright ©2015-2017 slotus.  All Rights Reserved    鄂ICP备15010044号-1  沪公网安备 31011702000056号</p>
+</div>
+</body>
+
+
+</html>

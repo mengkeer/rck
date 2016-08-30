@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DHU人才库</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <script src='../js/jquery-2.1.4.min.js'></script>
+    <script src='../js/bootstrap.min.js'></script>
+    <script src="../js/common.js"></script>
+</head>
+<body>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-content">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class="navbar-brand" href="/">
+                <img src="../img/wakatime-120.png">
+                <span>东华人才库</span>
+            </a>
+        </div>
+
+
+        <div id="navbar-content" class="collapse navbar-collapse navbar-right">
+
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">人才库</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">程序设计类</a></li>
+                        <li><a href="#">ACM类</a></li>
+                        <li><a href="#">多媒体类</a></li>
+                        <li><a href="#">移动开发类</a></li>
+                        <li><a href="#">网站设计类</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">项目活动</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="articlelist.html">文章资源</a></li>
+                        <li><a href="projectlist.html">项目申请</a></li>
+                        <li><a href="#">我参与的项目</a></li>
+                        <li><a href="post.html">发布请求</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">消息中心</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">已发送的消息</a></li>
+                        <li><a href="#">已接受的消息</a></li>
+                        <li><a href="#">发消息</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">mengkeer</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="info.html">基本信息</a></li>
+                        <li><a href="skills.html">专业技能</a></li>
+                        <li><a href="modpwd.html">密码修改</a></li>
+                    </ul>
+                </li>
+                <li><a href="/#" class="navbar-link">注销</a></li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="container content">
+    <!-- Page Head -->
+    <h2>发布请求</h2>
+    <br>
+
+    <div class="alert alert-info alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                aria-hidden="true">&times;</span></button>
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+        请在下面的文本框中输入文章标题和内容，然后点击发布按钮来发布文章！
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                   aria-expanded="false" aria-controls="collapseOne" class="collapsed">
+                    写文章
+                </a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <div class="content-box-content">
+
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                        注意：您当前的身份为学生，必须审核通过后才能显示出来！
+                    </div>
+
+                    <form action="#" method="post">
+                        <div class="form-group">
+                            <label  class="col-sm-12">文章标题</label>
+                            <p style="padding-left: 15px"><small>请输入精炼、简短的文章标题。</small></p>
+                            <div class="col-sm-4">
+                                <input type="email" class="form-control">
+                            </div>
+                        </div>
+                        <br />
+                        <br />
+                        <div class="form-group">
+                            <label class="col-sm-12">请输入文章正文</label>
+                            <p style="padding-left: 15px"><small>对于有图片的文章，可以先把文章发表到易班或者其他可以公开访问的博客，然后再复制过来哦~</small></p>
+                            <div class="col-sm-12">
+                                <textarea name="post"  style="width:100%;height:300px;"></textarea><br />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-4">
+                                <button type="submit" class="btn btn-success">提交</button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src='../js/collapse.js'></script>
+<script charset="utf-8" src="../lib/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="../lib/kindeditor/lang/zh_CN.js"></script>
+<style>
+    .panel-title a{
+        font-weight:bold;
+    }
+    .panel-title a:hover,.panel-title a:focus{
+        text-decoration: none;
+    }
+</style>
+<script>
+    var editor;
+    KindEditor.ready(function(K){
+        editor = K.create("textarea");
+    });
+</script>
+
+<div class="container">
+    <p class="copyright">Copyright ©2015-2017 slotus. All Rights Reserved 鄂ICP备15010044号-1 沪公网安备 31011702000056号</p>
+</div>
+</body>
+</html>
